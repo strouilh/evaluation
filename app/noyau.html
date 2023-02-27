@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module noyau</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>noyau</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Ctrouilhe%5Chubic%5Cbachelorcsi%5Cevaluation%5Capp%5Cnoyau.py">c:\users\trouilhe\hubic\bachelorcsi\evaluation\app\noyau.py</a></font></td></tr></table>
+    <p><tt>Puissance&nbsp;4&nbsp;:&nbsp;deux&nbsp;joueurs&nbsp;s'affrontent&nbsp;pour&nbsp;aligner&nbsp;4&nbsp;jetons&nbsp;de&nbsp;même&nbsp;couleur<br>
+Version&nbsp;:&nbsp;1.0.0<br>
+Author&nbsp;:&nbsp;John&nbsp;Doe</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-changer_joueur"><strong>changer_joueur</strong></a>(rang)</dt><dd><tt>Passer&nbsp;d'un&nbsp;joueur&nbsp;à&nbsp;l'autre<br>
+Params&nbsp;:&nbsp;rang&nbsp;numéro&nbsp;du&nbsp;joueur&nbsp;(0&nbsp;ou&nbsp;1)</tt></dd></dl>
+ <dl><dt><a name="-coup_gagnant"><strong>coup_gagnant</strong></a>(joueur, i, j, grille)</dt><dd><tt>Rechercher&nbsp;si&nbsp;4&nbsp;jetons&nbsp;de&nbsp;même&nbsp;couleur&nbsp;sont&nbsp;alignés&nbsp;dans&nbsp;toutes&nbsp;les&nbsp;directions&nbsp;possibles<br>
+Params&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;joueur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numéro&nbsp;du&nbsp;joueur&nbsp;(0&nbsp;ou&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i,&nbsp;j&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coordonnées&nbsp;de&nbsp;la&nbsp;dernière&nbsp;case&nbsp;proposée<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grille&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grille&nbsp;d'occupation&nbsp;par&nbsp;les&nbsp;jetons<br>
+Return&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;True&nbsp;si&nbsp;le&nbsp;joueur&nbsp;a&nbsp;4&nbsp;jetons&nbsp;dans&nbsp;une&nbsp;direction&nbsp;autorisée<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False&nbsp;sinon</tt></dd></dl>
+ <dl><dt><a name="-jeton"><strong>jeton</strong></a>(joueur, posx, posy, depx, depy, grille)</dt><dd><tt>Regarder&nbsp;les&nbsp;jetons&nbsp;à&nbsp;côté&nbsp;(selon&nbsp;la&nbsp;direction&nbsp;courante)<br>
+en&nbsp;vérifiant&nbsp;que&nbsp;l'on&nbsp;ne&nbsp;passe&nbsp;pas&nbsp;à&nbsp;l'extérieur&nbsp;de&nbsp;la&nbsp;grille<br>
+Params&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;joueur&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numéro&nbsp;du&nbsp;joueur&nbsp;(0&nbsp;ou&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posx,&nbsp;posy&nbsp;&nbsp;coordonnées&nbsp;de&nbsp;la&nbsp;case&nbsp;à&nbsp;tester<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;depx,&nbsp;depy&nbsp;&nbsp;direction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grille&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grille&nbsp;d'occupation&nbsp;par&nbsp;les&nbsp;jetons<br>
+Return&nbsp;:&nbsp;nombre&nbsp;de&nbsp;jetons&nbsp;alignés&nbsp;selon&nbsp;une&nbsp;direction&nbsp;(entier&nbsp;&gt;=&nbsp;0)</tt></dd></dl>
+ <dl><dt><a name="-jouer"><strong>jouer</strong></a>(case, gbouton, message)</dt><dd><tt>Jouer&nbsp;un&nbsp;coup&nbsp;:&nbsp;récupérer&nbsp;la&nbsp;proposition,&nbsp;mettre&nbsp;à&nbsp;jouer&nbsp;le&nbsp;jeu,&nbsp;vérifier&nbsp;la&nbsp;fin&nbsp;du&nbsp;jeu<br>
+Params&nbsp;:&nbsp;case&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;le&nbsp;label&nbsp;du&nbsp;bouton&nbsp;qui&nbsp;a&nbsp;été&nbsp;cliqué&nbsp;(chaîne&nbsp;de&nbsp;caractères)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gbouton&nbsp;&nbsp;&nbsp;&nbsp;la&nbsp;grille&nbsp;de&nbsp;boutons&nbsp;graphiques&nbsp;cliquables&nbsp;(widget)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message&nbsp;&nbsp;&nbsp;&nbsp;le&nbsp;label&nbsp;pour&nbsp;les&nbsp;messages&nbsp;à&nbsp;l'utilsateur&nbsp;(widget)</tt></dd></dl>
+ <dl><dt><a name="-maj_jeu"><strong>maj_jeu</strong></a>(case, grille, niveau, joueur)</dt><dd><tt>Mettre&nbsp;à&nbsp;jour&nbsp;la&nbsp;grille&nbsp;avec&nbsp;le&nbsp;nouveau&nbsp;coup&nbsp;joué&nbsp;&nbsp;&nbsp;<br>
+ATTENTION&nbsp;:&nbsp;il&nbsp;y&nbsp;a&nbsp;un&nbsp;pb&nbsp;--&gt;&nbsp;détectable&nbsp;avec&nbsp;test&nbsp;unitaire&nbsp;(test&nbsp;aux&nbsp;limites)<br>
+Params&nbsp;:&nbsp;case&nbsp;&nbsp;&nbsp;le&nbsp;label&nbsp;du&nbsp;bouton&nbsp;cliqué&nbsp;(chaîne&nbsp;de&nbsp;caractères)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grille&nbsp;&nbsp;la&nbsp;grille&nbsp;d'occupation&nbsp;des&nbsp;jetons&nbsp;des&nbsp;joueurs&nbsp;(-1,&nbsp;O&nbsp;et&nbsp;1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;niveau&nbsp;&nbsp;le&nbsp;nombre&nbsp;de&nbsp;cases&nbsp;vides&nbsp;pour&nbsp;chaque&nbsp;colonne&nbsp;(tableau)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joueur&nbsp;&nbsp;le&nbsp;numéro&nbsp;du&nbsp;joueur&nbsp;(0&nbsp;ou&nbsp;1)&nbsp;<br>
+Return&nbsp;:&nbsp;(i,&nbsp;j)&nbsp;numéro&nbsp;de&nbsp;ligne&nbsp;et&nbsp;numéro&nbsp;de&nbsp;colonne&nbsp;de&nbsp;la&nbsp;dernière&nbsp;case&nbsp;remplie</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>etat</strong> = 'en cours'<br>
+<strong>f</strong> = &lt;tkinter.Tk object .&gt;<br>
+<strong>gbouton</strong> = [[&lt;tkinter.Button object .!frame2.!button&gt;, &lt;tkinter.Button object .!frame2.!button2&gt;, &lt;tkinter.Button object .!frame2.!button3&gt;, &lt;tkinter.Button object .!frame2.!button4&gt;, &lt;tkinter.Button object .!frame2.!button5&gt;, &lt;tkinter.Button object .!frame2.!button6&gt;, &lt;tkinter.Button object .!frame2.!button7&gt;], [&lt;tkinter.Button object .!frame2.!button8&gt;, &lt;tkinter.Button object .!frame2.!button9&gt;, &lt;tkinter.Button object .!frame2.!button10&gt;, &lt;tkinter.Button object .!frame2.!button11&gt;, &lt;tkinter.Button object .!frame2.!button12&gt;, &lt;tkinter.Button object .!frame2.!button13&gt;, &lt;tkinter.Button object .!frame2.!button14&gt;], [&lt;tkinter.Button object .!frame2.!button15&gt;, &lt;tkinter.Button object .!frame2.!button16&gt;, &lt;tkinter.Button object .!frame2.!button17&gt;, &lt;tkinter.Button object .!frame2.!button18&gt;, &lt;tkinter.Button object .!frame2.!button19&gt;, &lt;tkinter.Button object .!frame2.!button20&gt;, &lt;tkinter.Button object .!frame2.!button21&gt;], [&lt;tkinter.Button object .!frame2.!button22&gt;, &lt;tkinter.Button object .!frame2.!button23&gt;, &lt;tkinter.Button object .!frame2.!button24&gt;, &lt;tkinter.Button object .!frame2.!button25&gt;, &lt;tkinter.Button object .!frame2.!button26&gt;, &lt;tkinter.Button object .!frame2.!button27&gt;, &lt;tkinter.Button object .!frame2.!button28&gt;], [&lt;tkinter.Button object .!frame2.!button29&gt;, &lt;tkinter.Button object .!frame2.!button30&gt;, &lt;tkinter.Button object .!frame2.!button31&gt;, &lt;tkinter.Button object .!frame2.!button32&gt;, &lt;tkinter.Button object .!frame2.!button33&gt;, &lt;tkinter.Button object .!frame2.!button34&gt;, &lt;tkinter.Button object .!frame2.!button35&gt;], [&lt;tkinter.Button object .!frame2.!button36&gt;, &lt;tkinter.Button object .!frame2.!button37&gt;, &lt;tkinter.Button object .!frame2.!button38&gt;, &lt;tkinter.Button object .!frame2.!button39&gt;, &lt;tkinter.Button object .!frame2.!button40&gt;, &lt;tkinter.Button object .!frame2.!button41&gt;, &lt;tkinter.Button object .!frame2.!button42&gt;]]<br>
+<strong>grille</strong> = [[-1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1], [-1, -1, -1, -1, -1, -1, -1]]<br>
+<strong>joueur</strong> = [('Laurel', 'orange'), ('Hardy', 'green')]<br>
+<strong>message</strong> = &lt;tkinter.Label object .!frame.!label&gt;<br>
+<strong>niveau</strong> = [5, 5, 5, 5, 5, 5, 5]<br>
+<strong>rang</strong> = 0</td></tr></table>
+</body></html>
